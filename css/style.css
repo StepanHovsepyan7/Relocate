@@ -176,3 +176,49 @@ nav {
 .contentMain {
   position: relative;
 }
+
+
+/* footer */
+
+.bgfooter{
+  background-image: url(../img/footerbg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 523px;
+}
+
+.footerParent{
+  height: 502px;
+  background-color: #003531;
+  z-index: -100;
+  position: relative;
+  bottom: 160px;
+}
+
+.footerContent{
+  padding-top: 225px;
+  text-align: start;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: "Roboto", serif;
+}
+.footerContent a {
+  color: rgba(255, 255, 255, 0.678);
+}
+.footerContent li{
+  padding-top: 5px;
+}
+.icons{
+  font-size: 25px;
+  margin-top: 20px;
+}
+.mainHref{
+  font-weight: bold;
+  font-size: 25px;
+}
+.secondMg{
+  margin-top: 20px;
+}

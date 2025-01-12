@@ -18,7 +18,9 @@ a {
   text-decoration: none;
   color: black;
 }
-
+body {
+  transition: 0.5s;
+}
 /* Navigation */
 
 nav {
@@ -192,7 +194,6 @@ nav {
 
 /* Explore */
 
-
 .explorehead {
   align-items: center;
   text-align: center;
@@ -226,32 +227,152 @@ nav {
   margin-top: 32px;
 }
 
+/* Display grid part */
+
 .display_grid {
   display: grid;
   margin-top: 90px;
   margin-left: 90px;
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);
   align-items: center;
+  cursor: pointer;
+}
+.display_grid img {
+  transition: 0.5s;
+}
+
+.display_grid :hover .grid-1_content {
+  opacity: 1;
+  transform: translateY(30px);
+}
+.display_grid :hover .grid-2_content {
+  opacity: 1;
+  transform: translateY(30px);
+}
+.display_grid :hover .grid-3_content {
+  opacity: 1;
+  transform: translateY(30px);
+}
+.display_grid :hover .grid-4_content {
+  opacity: 1;
+  transform: translateY(30px);
+}
+
+.grid-1_content {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: 0;
+  top: 365px;
+  bottom: 0;
+  right: 0;
+  font-family: "Roboto", serif;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: -2px 1px 4px #000000;
+  opacity: 0;
+  transition: 0.5s;
+}
+.grid-1_content :nth-child(1) {
+  font-weight: 900;
+  font-size: 30px;
+}
+.grid-1_content :nth-child(2) {
+  font-weight: 700;
+  font-size: 26px;
+}
+.grid-2_content {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: 0;
+  top: 223px;
+  bottom: 0;
+  right: 0;
+  font-family: "Roboto", serif;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: -2px 1px 4px #000000;
+  opacity: 0;
+  transition: 0.5s;
+}
+.grid-2_content :nth-child(1) {
+  font-weight: 900;
+  font-size: 30px;
+}
+.grid-2_content :nth-child(2) {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.grid-3_content {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: 0;
+  top: 223px;
+  bottom: 0;
+  right: 0;
+  font-family: "Roboto", serif;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: -2px 1px 4px #000000;
+  opacity: 0;
+  transition: 0.5s;
+}
+.grid-3_content :nth-child(1) {
+  font-weight: 900;
+  font-size: 30px;
+}
+.grid-3_content :nth-child(2) {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.grid-4_content {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left: 0;
+  top: 195px;
+  bottom: 0;
+  right: 0;
+  font-family: "Roboto", serif;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: -2px 1px 4px #000000;
+  opacity: 0;
+  transition: 0.5s;
+}
+.grid-4_content :nth-child(1) {
+  font-weight: 900;
+  font-size: 30px;
+}
+.grid-4_content :nth-child(2) {
+  font-weight: 700;
+  font-size: 26px;
 }
 .grid-1 {
   grid-column: 1 / span 1;
   grid-row: 1 / span 2;
+  position: relative;
 }
 .grid-2 {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
+  position: relative;
 }
 
 .grid-3 {
   grid-column: 3 / span 1;
   grid-row: 1 / span 1;
+  position: relative;
 }
 .grid-4 {
   grid-row: 2 / span 1;
   grid-column: 2 / span 2;
+  position: relative;
 }
+
+/* Display grid part  end*/
 
 /* footer */
 
@@ -260,7 +381,6 @@ nav {
 }
 
 .bgfooter {
-  /* background-image: url(../img/footerbg.png); */
   background: linear-gradient(
       0deg,
       rgba(153, 79, 45, 0) 26%,

@@ -229,147 +229,91 @@ nav {
 
 /* Display grid part */
 
-.display_grid {
+.grid-parent {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 85%;
   display: grid;
-  margin-top: 90px;
-  margin-left: 90px;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  align-items: center;
+  gap: 20px;
+}
+
+.grid-parent .grid-item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
   cursor: pointer;
-}
-.display_grid img {
-  transition: 0.5s;
+  position: relative;
 }
 
-.display_grid :hover .grid-1_content {
-  opacity: 1;
-  transform: translateY(30px);
-}
-.display_grid :hover .grid-2_content {
-  opacity: 1;
-  transform: translateY(30px);
-}
-.display_grid :hover .grid-3_content {
-  opacity: 1;
-  transform: translateY(30px);
-}
-.display_grid :hover .grid-4_content {
-  opacity: 1;
-  transform: translateY(30px);
+.grid-parent .grid-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.grid-1_content {
-  position: absolute;
-  color: rgb(255, 255, 255);
-  left: 0;
-  top: 365px;
-  bottom: 0;
-  right: 0;
-  font-family: "Roboto", serif;
-  font-size: 50px;
-  text-align: center;
-  text-shadow: -2px 1px 4px #000000;
-  opacity: 0;
-  transition: 0.5s;
-}
-.grid-1_content :nth-child(1) {
-  font-weight: 900;
-  font-size: 30px;
-}
-.grid-1_content :nth-child(2) {
-  font-weight: 700;
-  font-size: 26px;
-}
-.grid-2_content {
-  position: absolute;
-  color: rgb(255, 255, 255);
-  left: 0;
-  top: 223px;
-  bottom: 0;
-  right: 0;
-  font-family: "Roboto", serif;
-  font-size: 50px;
-  text-align: center;
-  text-shadow: -2px 1px 4px #000000;
-  opacity: 0;
-  transition: 0.5s;
-}
-.grid-2_content :nth-child(1) {
-  font-weight: 900;
-  font-size: 30px;
-}
-.grid-2_content :nth-child(2) {
-  font-weight: 700;
-  font-size: 26px;
-}
-
-.grid-3_content {
-  position: absolute;
-  color: rgb(255, 255, 255);
-  left: 0;
-  top: 223px;
-  bottom: 0;
-  right: 0;
-  font-family: "Roboto", serif;
-  font-size: 50px;
-  text-align: center;
-  text-shadow: -2px 1px 4px #000000;
-  opacity: 0;
-  transition: 0.5s;
-}
-.grid-3_content :nth-child(1) {
-  font-weight: 900;
-  font-size: 30px;
-}
-.grid-3_content :nth-child(2) {
-  font-weight: 700;
-  font-size: 26px;
-}
-
-.grid-4_content {
-  position: absolute;
-  color: rgb(255, 255, 255);
-  left: 0;
-  top: 195px;
-  bottom: 0;
-  right: 0;
-  font-family: "Roboto", serif;
-  font-size: 50px;
-  text-align: center;
-  text-shadow: -2px 1px 4px #000000;
-  opacity: 0;
-  transition: 0.5s;
-}
-.grid-4_content :nth-child(1) {
-  font-weight: 900;
-  font-size: 30px;
-}
-.grid-4_content :nth-child(2) {
-  font-weight: 700;
-  font-size: 26px;
-}
-.grid-1 {
+.grid-parent .grid-item-1 {
   grid-column: 1 / span 1;
   grid-row: 1 / span 2;
-  position: relative;
-}
-.grid-2 {
-  grid-column: 2 / span 1;
-  grid-row: 1 / span 1;
-  position: relative;
 }
 
-.grid-3 {
+.grid-parent .grid-item-2 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.grid-parent .grid-item-3 {
   grid-column: 3 / span 1;
   grid-row: 1 / span 1;
-  position: relative;
 }
-.grid-4 {
-  grid-row: 2 / span 1;
+
+.grid-parent .grid-item-4 {
   grid-column: 2 / span 2;
-  position: relative;
+  grid-row: 2 / span 1;
+}
+
+.grid-parent .grid-item .content-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color .5s;
+  background-color: transparent;
+}
+
+.grid-parent .grid-item .content-wrapper:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.grid-parent .grid-item .content-wrapper:hover > div {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grid-parent .grid-item .content-wrapper > div {
+  transition: .5s;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.grid-parent .grid-item .content-wrapper h3 {
+  text-transform: capitalize;
+  color: white;
+  font-size: 40px;
+}
+
+.grid-parent .grid-item .content-wrapper p {
+  text-transform: uppercase;
+  color: white;
+  font-size: 30px;
 }
 
 /* Display grid part  end*/

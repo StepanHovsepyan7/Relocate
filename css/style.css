@@ -100,6 +100,10 @@ nav {
   text-shadow: -2px 1px 4px #000000;
 }
 
+.fa-flip{
+  display: none;
+}
+
 /* Destination */
 
 .linearParent__container {
